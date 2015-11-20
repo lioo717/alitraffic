@@ -19,3 +19,8 @@ class string2num:
                 u"大到暴雨":12}
 
         return data[s]
+    @staticmethod
+    def line2num(s):
+        data = {u"线路10":10, u"线路15":15}
+
+        return data[s]

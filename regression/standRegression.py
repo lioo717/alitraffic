@@ -23,4 +23,4 @@ def predict(xMat, ws):
 
 
 def rssError(yArr, yHatArr):
-    return ((yArr - yHatArr)**2).sum()
+    return ((yArr - yHatArr)/yArr).sum()/yHatArr.size
