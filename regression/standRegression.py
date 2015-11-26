@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-#just to explain standard Regression
+# just to explain standard Regression
 # feature = [ startdate week time weather_day]
 # out = [peoplecnt]
 # X.append(featuure)
@@ -23,4 +23,5 @@ def predict(xMat, ws):
 
 
 def rssError(yArr, yHatArr):
-    return ((yArr - yHatArr)/yArr).sum()/yHatArr.size
+    print abs(yArr - yHatArr)/yArr
+    return (abs(yArr - yHatArr)/yArr).sum()/yHatArr.size

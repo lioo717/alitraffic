@@ -50,7 +50,7 @@ class getData:
         :param min_day: 最小日期 "20140801"
         :param max_day: 最大日期
         :param line_num: 线路 (list)
-        :return: data [星期, 天气, 最高温, 最低温, 小时, 线路, 数量(y)]
+        :return: data [星期, 天气, 最高温, 最低温, 小时, 线路, 数量(y), date]
         """
         import copy
 
@@ -68,9 +68,10 @@ class getData:
             _ = None
             _ = copy.deepcopy(weather_data[weather_date.index(group_gd_date[ind])])
             _.extend(tem)
+            _.append(group_gd[ind][1])
             data.append(_)
 
-        data = [tem for tem in data if tem[-2] in line_num]
+        data = [tem for tem in data if tem[-3] in line_num]
 
         return data
 

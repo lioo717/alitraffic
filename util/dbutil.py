@@ -11,7 +11,7 @@ class dbutil:
     def __init__(self):
         engine = create_engine('mysql+mysqlconnector://root@localhost:3306/tianchi')
         DBSession = sessionmaker(bind=engine)
-        self.session = DBSession()
+        self.session = DBSession(   )
 
     def get_session(self):
         return self.session
