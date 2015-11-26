@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 __author__ = 'HeYongxing'
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from sqlalchemy import func
 
@@ -50,11 +50,16 @@ class getData:
         :param min_day: 最小日期 "20140801"
         :param max_day: 最大日期
         :param line_num: 线路 (list)
-        :return: data [星期, 天气, 最高温, 最低温, 小时, 线路, 数量(y), date]
+                        0    1      2     3        4        5           6         7       8
+        :return: data [星期, 天气, 最高温, 最低温, 节假日长度, 第i个节假日, 工作日长度, 第i个工作日, date,
+                         9    10    11
+                        小时, 线路, 数量(y)]
         """
         import copy
 
         [group_gd, weathers] = [self.group_gd, self.weathers]
+        work_holiday = self.get_day_type(min_day, max_day)
+
         min_day = datetime.strptime(min_day, "%Y%m%d")
         max_day = datetime.strptime(max_day, "%Y%m%d")
 
@@ -64,13 +69,14 @@ class getData:
         weather_date = [tem[0] for tem in weathers if (tem[1] <= max_day and tem[1] >= min_day)]
         weather_data = [tem[2:] for tem in weathers if (tem[1] <= max_day and tem[1] >= min_day)]
         data = []
+
         for ind, tem in enumerate(group_gd_data):
             _ = None
             _ = copy.deepcopy(weather_data[weather_date.index(group_gd_date[ind])])
-            _.extend(tem)
+            _.extend(work_holiday[weather_date.index(group_gd_date[ind])])
             _.append(group_gd[ind][1])
+            _.extend(tem)
             data.append(_)
-
         data = [tem for tem in data if tem[-3] in line_num]
 
         return data
@@ -78,7 +84,9 @@ class getData:
     def get_test_data(self):
         """
         :return: 返回20150101到20150107的测试数据集
-                [[20150101, 4, 1, 19, 6, 6], ..., [20150107, 3, 2, 17, 10, 21]]
+                    0    1    2     3     4        5         6         7        8          9
+                 [日期, 星期, 天气, 最高温, 最低温, 节假日长度, 第i个节假日, 工作日长度, 第i个工作日, 小时]
+
         """
         import copy
         weathers = self.weathers
@@ -86,13 +94,95 @@ class getData:
         date = range(20150101, 20150108)
         weather_date = [tem[0] for tem in weathers]
         weather_data = [tem[2:] for tem in weathers]
+        work_holiday = self.get_day_type(min_day="20150101", max_day="20150107")
         test = []
-        for tem in date:
-            tem_data = [tem,]
+        for ind, tem in enumerate(date):
+            tem_data = [tem, ]
             tem_data.extend(weather_data[weather_date.index(str(tem))])
+            tem_data.extend(work_holiday[ind])
             for hour in hour_range:
                 _ = copy.deepcopy(tem_data)
                 _.append(hour)
                 test.append(_)
-
         return test
+
+    def get_day_type(self, min_day="20140801", max_day="201517"):
+        """分别是每天对应的节假日长度, 第i个节假日, 工作日长度, 第i个工作日, 例如10月3日,对应的为[7, 3, 0, 0]
+
+        :param min_day: 开始日期
+        :param max_day: 结束日期
+        :return: [holidays, ith_holidays, workdays, ith_workdays] 分别是每天对应的节假日长度, 第i个节假日, 工作日长度, 第i个工作日
+        """
+        modified_holidays = ['20140906', '20140907', '20140908',
+                             '20141001', '20141002', '20141003', '20141004', '20141005', '20141006', '20141007',
+                             '20150101', '20150102', '20150103']
+        modified_holidays = [datetime.strptime(tem, "%Y%m%d") for tem in modified_holidays]
+        modified_workdays = ['20140928', '20141011',
+                             '20150104']
+        modified_workdays = [datetime.strptime(tem, "%Y%m%d") for tem in modified_workdays]
+
+        min_day = datetime.strptime(min_day, "%Y%m%d")
+        max_day = datetime.strptime(max_day, "%Y%m%d")
+
+        oneday = timedelta(days=1)
+
+        start_day = min_day + timedelta(days=-7)
+        end_day = max_day + timedelta(days=7)
+
+        i = 0
+        daytype = [None] * ((end_day - start_day).days + 1)
+        days = [None] * ((end_day - start_day).days + 1)
+        tem_day = start_day
+        while 1:
+            if tem_day > end_day:
+                break
+            if tem_day.isoweekday() in range(1, 6):
+                daytype[i] = 1
+            if tem_day.isoweekday() in range(6, 8):
+                daytype[i] = 0
+            if tem_day in modified_workdays:
+                daytype[i] = 1
+            if tem_day in modified_holidays:
+                daytype[i] = 0
+            days[i] = tem_day
+            i += 1
+            tem_day = tem_day + oneday
+        datelength = []
+        dateind = []
+        k = 0
+        for ind, tem in enumerate(daytype):
+            if ind == len(days) - 1:
+                break
+            if daytype[ind] == daytype[ind + 1]:
+                k += 1
+                dateind.append(k)
+            else:
+                k += 1
+                dateind.append(k)
+                datelength.extend([k for i in range(0, k)])
+                k = 0
+        tem_day = min_day
+        holidays = []
+        ith_holidays = []
+        workdays = []
+        ith_workdays = []
+        while 1:
+            if tem_day > max_day:
+                break
+            ind = days.index(tem_day)
+            if daytype[ind]:
+                holidays.append(0)
+                ith_holidays.append(0)
+                workdays.append(datelength[ind])
+                ith_workdays.append(dateind[ind])
+            else:
+                holidays.append(datelength[ind])
+                ith_holidays.append(dateind[ind])
+                workdays.append(0)
+                ith_workdays.append(0)
+            tem_day = tem_day + oneday
+            result = []
+        for ind in range(0, len(holidays)):
+            _ = [holidays[ind], ith_holidays[ind], workdays[ind], ith_workdays[ind]]
+            result.append(_)
+        return result

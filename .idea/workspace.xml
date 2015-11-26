@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa222b1d-2a90-49a8-966f-879d39a3b842" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FeatureTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/dbutil.py" afterPath="$PROJECT_DIR$/util/dbutil.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/getData.py" afterPath="$PROJECT_DIR$/util/getData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regression/standRegression.py" afterPath="$PROJECT_DIR$/regression/standRegression.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="traffic.iws" />
@@ -33,110 +29,22 @@
         <entry file="file://$PROJECT_DIR$/util/getData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="89" selection-end-column="11" />
               <folding>
-                <element signature="e#50#79#0" expanded="true" />
+                <element signature="e#50#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="textdata2sql.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/textdata2sql.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-              <folding>
-                <element signature="e#49#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="string2num.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/string2num.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="14" selection-end-column="21" />
+            <state vertical-scroll-proportion="1.7976391">
+              <caret line="75" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="e#50#68#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FeatureTest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FeatureTest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="figure.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/matplotlib/figure.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="899" column="43" selection-start-line="899" selection-start-column="33" selection-end-line="899" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32711622">
-              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MultiMarkdownHtmlEditor">
-            <state />
-          </provider>
-          <provider editor-type-id="MultiMarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/items.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2357" column="0" selection-start-line="2357" selection-start-column="0" selection-end-line="2357" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="standRegression.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regression/standRegression.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -164,13 +72,13 @@
         <option value="$PROJECT_DIR$/regression/__init__.py" />
         <option value="$PROJECT_DIR$/util/textdata2sql.py" />
         <option value="$PROJECT_DIR$/util/string2num.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/util/dbutil.py" />
         <option value="$PROJECT_DIR$/util/writetxt.py" />
         <option value="$PROJECT_DIR$/regression/standRegression.py" />
-        <option value="$PROJECT_DIR$/util/getData.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/FeatureTest.py" />
+        <option value="$PROJECT_DIR$/util/getData.py" />
+        <option value="$PROJECT_DIR$/test.py" />
       </list>
     </option>
   </component>
@@ -178,8 +86,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="43" />
+    <option name="y" value="23" />
+    <option name="width" value="1877" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -204,6 +114,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,14 +163,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../crawl/artron" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -268,7 +178,7 @@
       <recent name="$PROJECT_DIR$/util" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FeatureTest">
+  <component name="RunManager" selected="Python.test">
     <configuration default="false" name="dbutil" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -485,10 +395,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.FeatureTest" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.writetxt" />
-        <item index="3" class="java.lang.String" itemvalue="Python.getData" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.getData" />
+        <item index="2" class="java.lang.String" itemvalue="Python.FeatureTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.writetxt" />
         <item index="4" class="java.lang.String" itemvalue="Python.dbutil" />
       </list>
     </recent_temporary>
@@ -516,28 +426,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="43" y="23" width="1877" height="1057" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14165351" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1411638" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25346535" sideWeight="0.51184833" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25284973" sideWeight="0.12984914" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871288" sideWeight="0.49815693" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.49722" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.49407327" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284974" sideWeight="0.49722" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25181347" sideWeight="0.87015086" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Unicode Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6424658" sideWeight="0.7879269" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25346535" sideWeight="0.48815167" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6424658" sideWeight="0.7879269" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -610,10 +520,10 @@
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MultiMarkdownHtmlEditor">
+      <provider editor-type-id="MultiMarkdownPreviewEditor">
         <state />
       </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
+      <provider editor-type-id="MultiMarkdownHtmlEditor">
         <state />
       </provider>
     </entry>
@@ -646,7 +556,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
           <folding>
-            <element signature="e#50#79#0" expanded="true" />
+            <element signature="e#50#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -656,7 +566,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding>
-            <element signature="e#49#60#0" expanded="true" />
+            <element signature="e#49#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -714,7 +624,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="2" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
           <folding>
-            <element signature="e#49#60#0" expanded="true" />
+            <element signature="e#49#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,7 +651,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#50#79#0" expanded="true" />
+            <element signature="e#50#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -789,7 +699,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
           <folding>
-            <element signature="e#49#60#0" expanded="true" />
+            <element signature="e#49#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,10 +724,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider editor-type-id="MultiMarkdownHtmlEditor">
+      <provider editor-type-id="MultiMarkdownPreviewEditor">
         <state />
       </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
+      <provider editor-type-id="MultiMarkdownHtmlEditor">
         <state />
       </provider>
     </entry>
@@ -834,7 +744,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#49#60#0" expanded="true" />
+            <element signature="e#49#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -909,72 +819,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2357" column="0" selection-start-line="2357" selection-start-column="0" selection-end-line="2357" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/string2num.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#50#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/textdata2sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#49#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/regression/standRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/getData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
-          <folding>
-            <element signature="e#50#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="899" column="43" selection-start-line="899" selection-start-column="33" selection-end-line="899" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -987,18 +835,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/util/string2num.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/textdata2sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="e#49#60#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/matplotlib/figure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="899" column="43" selection-start-line="899" selection-start-column="33" selection-end-line="899" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32711622">
+        <state vertical-scroll-proportion="0.34285715">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="MultiMarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider editor-type-id="MultiMarkdownHtmlEditor">
         <state />
       </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
-        <state />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67146975">
+          <caret line="2357" column="0" selection-start-line="2357" selection-start-column="0" selection-end-line="2357" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regression/standRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5201729">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/getData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="89" selection-end-column="11" />
+          <folding>
+            <element signature="e#50#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7976391">
+          <caret line="75" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#50#68#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

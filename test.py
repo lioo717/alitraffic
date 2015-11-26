@@ -9,13 +9,28 @@ from regression.standRegression import *
 # 十号线路
 getData = getData()
 
+#                 0    1      2     3        4        5           6         7       8
+# :return: data [星期, 天气, 最高温, 最低温, 节假日长度, 第i个节假日, 工作日长度, 第i个工作日, date,
+#                  9    10    11
+#                 小时, 线路, 数量(y)]
+
+# :return: 返回20150101到20150107的测试数据集
+#             0    1    2     3     4        5         6         7        8          9
+#          [日期, 星期, 天气, 最高温, 最低温, 节假日长度, 第i个节假日, 工作日长度, 第i个工作日, 小时]
+#
+# """
+
 data = getData.get_train_data(min_day="20140801", max_day="20141130", line_num=[10])
 train = np.array(data)
-xtrain = train[:, 0:-2]
+print train.shape
+xtrain = train[:, range(0,8),9]
 ytrain = train[:, -1]
 
-data = getData.get_train_data(min_day="20141201", max_day="20141207", line_num=[10])
+# data = getData.get_test_data()
+data = getData.get_train_data(min_day="201401201", max_day="20141131", line_num=[10])
 test = np.array(data)
+print test.shape
+
 xtest = test[:, 0:-2]
 ytest = test[:, -1]
 
