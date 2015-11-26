@@ -71,13 +71,13 @@ class getData:
         data = []
 
         for ind, tem in enumerate(group_gd_data):
-            _ = None
-            _ = copy.deepcopy(weather_data[weather_date.index(group_gd_date[ind])])
-            _.extend(work_holiday[weather_date.index(group_gd_date[ind])])
-            _.append(group_gd[ind][1])
-            _.extend(tem)
-            data.append(_)
-        data = [tem for tem in data if tem[-3] in line_num]
+            if tem[-2] in line_num:
+                _ = None
+                _ = copy.deepcopy(weather_data[weather_date.index(group_gd_date[ind])])
+                _.extend(work_holiday[weather_date.index(group_gd_date[ind])])
+                _.append(group_gd[ind][1])
+                _.extend(tem)
+                data.append(_)
 
         return data
 

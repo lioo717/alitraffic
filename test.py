@@ -23,27 +23,31 @@ getData = getData()
 data = getData.get_train_data(min_day="20140801", max_day="20141130", line_num=[10])
 train = np.array(data)
 print train.shape
-xtrain = train[:, range(0,8),9]
+features = range(0,8)
+features.append(9)
+xtrain = train[:, features]
 ytrain = train[:, -1]
 
 # data = getData.get_test_data()
-data = getData.get_train_data(min_day="201401201", max_day="20141131", line_num=[10])
-test = np.array(data)
-print test.shape
+# test = np.array(data)
+# xtest = test[:, 1:]
 
-xtest = test[:, 0:-2]
+
+data = getData.get_train_data(min_day="20141201", max_day="20141231", line_num=[10])
+test = np.array(data)
+xtest = test[:, features]
 ytest = test[:, -1]
 
 
 from sklearn import linear_model
 clf = linear_model.BayesianRidge(normalize=True)
-clf.fit (xtrain, ytrain)
+clf.fit(xtrain, ytrain)
 yHat = clf.predict(xtest)
 print rssError(ytest, yHat)," BayesianRidge"
 
 from sklearn import tree
 clf = tree.DecisionTreeRegressor()
-clf.fit (xtrain, ytrain)
+clf.fit(xtrain, ytrain)
 yHat = clf.predict(xtest)
 print rssError(ytest, yHat)," DecisionTreeRegressor"
 
@@ -56,10 +60,10 @@ print rssError(ytest, yHat)," GradientBoostingRegressor"
 
 from sklearn import kernel_ridge
 
-clf = kernel_ridge.KernelRidge(kernel="rbf")
-clf.fit(xtrain, ytrain)
-yHat = clf.predict(xtest)
-print rssError(ytest, yHat)," KernelRidge"
+# clf = kernel_ridge.KernelRidge(kernel="rbf")
+# clf.fit(xtrain, ytrain)
+# yHat = clf.predict(xtest)
+# print rssError(ytest, yHat)," KernelRidge"
 
 from sklearn.neighbors import KNeighborsRegressor
 clf = KNeighborsRegressor(n_neighbors=1)
@@ -68,7 +72,7 @@ yHat = clf.predict(xtest)
 print rssError(ytest, yHat), " KNeighborsRegressor"
 
 
-clf = linear_model.LassoLars(alpha=.01,normalize=True)
+clf = linear_model.LassoLars(alpha=.01, normalize=True)
 clf.fit(xtrain, ytrain)
 yHat = clf.predict(xtest)
 print rssError(ytest, yHat), " LassoLars"
