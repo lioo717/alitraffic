@@ -42,7 +42,7 @@ class getData:
         return [group_gd, weathers]
 
     def get_train_data(self, hour_range=range(6, 22), min_day="20140801", max_day="20141231",
-                       line_num=[10, 15]):
+                       line_num=[6, 11]):
         """
         返回的数据, 从min_day到max_day中每天时间在hour_range中的数据, 可以选择返回线路
 

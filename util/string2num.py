@@ -21,6 +21,6 @@ class string2num:
         return data[s]
     @staticmethod
     def line2num(s):
-        data = {u"线路10":10, u"线路15":15}
+        data = {u"线路11":11, u"线路6":6}
 
         return data[s]

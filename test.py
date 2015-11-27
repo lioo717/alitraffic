@@ -17,13 +17,12 @@ getData = getData()
 # :return: 返回20150101到20150107的测试数据集
 #             0    1    2     3     4        5         6         7        8          9
 #          [日期, 星期, 天气, 最高温, 最低温, 节假日长度, 第i个节假日, 工作日长度, 第i个工作日, 小时]
-#
-# """
+
 
 data = getData.get_train_data(min_day="20140801", max_day="20141130", line_num=[10])
 train = np.array(data)
 print train.shape
-features = range(0,8)
+features = range(0, 8)
 features.append(9)
 xtrain = train[:, features]
 ytrain = train[:, -1]
