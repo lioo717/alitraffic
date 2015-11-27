@@ -68,6 +68,7 @@ from sklearn.neighbors import KNeighborsRegressor
 clf = KNeighborsRegressor(n_neighbors=1)
 clf.fit(xtrain, ytrain)
 yHat = clf.predict(xtest)
+clf.score(xtest, ytest)
 print rssError(ytest, yHat), " KNeighborsRegressor"
 
 
