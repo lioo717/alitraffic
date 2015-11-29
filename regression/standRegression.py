@@ -6,22 +6,14 @@
 # Y.append(out)
 # yHat means the prediction ;yMat means the real value
 
-from numpy import *
-def standRegression(X, Y):
-    xMat = mat(X)
-    yMat = mat(Y).T
-    xTx = xMat.T * xMat
-    if linalg.det(xTx) ==0.0:
-        print "Singular matrix cannot do reverse"
-        return
-    wx = xTx.T * (xMat.T*yMat)
-    return wx
-
-def predict(xMat, ws):
-    yHat = xMat * ws
-    return yHat
+import numpy as np
 
 
 def rssError(yArr, yHatArr):
-    print abs(yArr - yHatArr)/yArr
-    return (abs(yArr - yHatArr)/yArr).sum()/yHatArr.size
+    a = abs(yArr - yHatArr) / yArr
+    # 线性
+    tem = (a-0.3) / (-3) * 10
+    # e
+    # tem = np.log((a+0.7).tolist())/np.log(0.7)
+    tem = tem * (tem > 0)
+    return tem.sum() / tem.size

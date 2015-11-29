@@ -25,25 +25,26 @@ getdata = getData()
 #          [日期, 星期, 天气, 最高温, 最低温, 节假日长度, 第i个节假日, 工作日长度, 第i个工作日, 小时]
 #
 # """
-features = [0, 1, 2, 3, 4, 5, 6, 7, 9]
+features =  [1, 2, 3, 4, 5, 7, 9]
 
-data = getdata.get_train_data(min_day="20140820", max_day="20141231", line_num=[6])
+data = getdata.get_train_data(min_day="20140901", max_day="20141231", line_num=[6])
 train = np.array(data)
 
 xtrain1 = train[:, features]
 ytrain1 = train[:, -1]
 
-data = getdata.get_train_data(min_day="20140820", max_day="20141231", line_num=[11])
+data = getdata.get_train_data(min_day="20140901", max_day="20141231", line_num=[11])
 train = np.array(data)
 xtrain2 = train[:, features]
 ytrain2 = train[:, -1]
 
 data = getdata.get_test_data()
 test = np.array(data)
-xtest = test[:, 1:]
+test_features =  [2, 3, 4, 5, 6, 8, 9]
+xtest = test[:, test_features]
 
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.linear_model import BayesianRidge
+from sklearn.ensemble import GradientBoostingRegressor
 
 
 def regression(regressor):
@@ -82,5 +83,5 @@ import time
 if __name__ == '__main__':
     [yHat1, yHat2] = regression(DecisionTreeRegressor)
     commit("result_tree_%d.txt" % int(time.time()), np.array(test), yHat1, yHat2)
-    [yHat1, yHat2] = regression(BayesianRidge)
-    commit("result_bayesian_%d.txt" % int(time.time()), np.array(test), yHat1, yHat2)
+    [yHat1, yHat2] = regression(GradientBoostingRegressor)
+    commit("result_GradientBoosting_%d.txt" % int(time.time()), np.array(test), yHat1, yHat2)

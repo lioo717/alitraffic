@@ -24,7 +24,6 @@ class getData:
         group_gd = self.session.query(gd_train.Deal_time, gd_train.Line_name, func.count(gd_train.Deal_time)).group_by(
             gd_train.Deal_time).group_by(gd_train.Line_name).all()
         weathers = self.session.query(weather).all()
-        print type(weathers[2].Weather_day)
         weathers = [[datetime.strftime(tem.Date_time, "%Y%m%d"),  # 时间字符串
                      tem.Date_time,  # 时间
                      tem.Date_time.isoweekday(),  # 周几
@@ -61,7 +60,7 @@ class getData:
         work_holiday = self.get_day_type(min_day, max_day)
 
         min_day = datetime.strptime(min_day, "%Y%m%d")
-        max_day = datetime.strptime(max_day, "%Y%m%d")
+        max_day = datetime.strptime(max_day, "%Y%m%d") + timedelta(days=1)
 
         group_gd = [tem for tem in group_gd if ((tem[2] in hour_range) and tem[1] <= max_day and tem[1] >= min_day)]
         group_gd_date = [tem[0] for tem in group_gd]
@@ -106,7 +105,7 @@ class getData:
                 test.append(_)
         return test
 
-    def get_day_type(self, min_day="20140801", max_day="201517"):
+    def get_day_type(self, min_day="20140801", max_day="20150107"):
         """分别是每天对应的节假日长度, 第i个节假日, 工作日长度, 第i个工作日, 例如10月3日,对应的为[7, 3, 0, 0]
 
         :param min_day: 开始日期
